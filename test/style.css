@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777777;
+    padding: 30px;
+}
+html{
+    font-size: 10px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.heading-secondary{
+    margin-top: 150px;
+    margin-left: 150px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    background-image: linear-gradient(to right,blue,darkblue);
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all .2s;
+    display: inline-block;
+   
+}
+.heading-secondary:hover{
+    transform: skewY(3deg) scale(1.2);
+    overflow: hidden;
+    text-shadow: 5rem 1rem 2rem rgba(black,.2);
+}

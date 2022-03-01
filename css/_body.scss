@@ -1,0 +1,288 @@
+//-----------Skills Section-----------------------
+
+.skills{
+    padding: 30rem 0 25rem 0;
+    margin-top: -20rem;
+    background-image: linear-gradient(to right bottom,rgba($lightblue,.8),rgba($darkblue,.8)),url('../img/background2.jpg');
+    background-size: cover;
+    position: relative;
+    clip-path: ellipse(65% 46% at 51% 52%);
+    background-attachment: fixed;
+   
+    .skill-box{
+        background-color: rgba(white,.8);
+        font-size: 1.5rem;
+        padding: 2.5rem 2.5rem 5rem 2.5rem;
+        text-align: center;
+        border-radius: 5rem;
+        box-shadow: 0 1.5rem 4rem rgba(black,.15);
+        transition: all ease .2s;
+        &__icon{
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background-image: linear-gradient(to right, $lightblue, $darkblue);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-1.5rem) scale(1.03);
+        }
+    }
+}
+// --------------------------------Courses Section---
+.courses{
+    background-color: $lightgrey1;
+    padding: 25rem 0 10rem 0;
+    margin-top: -20rem;
+    
+    
+}
+
+// Card Section-------------------------------------
+.card{
+    perspective: 150rem;
+    position: relative;
+    height: 45rem;
+
+
+    &__side{
+        color: white;
+        font-size: 2rem;
+        height: 45rem;
+        transition: all .9s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden; 
+        box-shadow: 0 1.5rem 4rem rgba(black,.15);
+        overflow: hidden;
+        border-radius: 5rem;
+
+
+        &--front{
+            background-color: $white;
+        }
+        &--back{
+            transform: rotateY(-180deg);   
+            &-1{
+                background-image: linear-gradient(
+                        to right bottom,rgba($lightyellow,.85),rgba($orangedark,.85)
+                    );
+            }    
+            &-2{
+                background-image: linear-gradient(
+                        to right bottom,rgba($lightblue,.85),rgba($darkblue,.85)
+                    );
+            }
+            &-3{
+                background-image: linear-gradient(
+                        to right bottom,rgba($tertiarylight,.85),rgba($tertiarydark,.85)
+                    );
+            }
+        }
+        &__picture{
+            background-size: cover;
+            height: 23rem;
+            background-blend-mode: screen;
+            clip-path: ellipse(80% 70% at 50% 30%);
+            &--1{
+                background-image: linear-gradient(to right,
+                $lightyellow,$orangedark),url(../img/involve1.jpg);
+            }
+            &--2{
+                background-image: linear-gradient(to right,
+                $lightblue,$darkblue),url(../img/involve2.jpg);
+            }
+            &--3{
+                background-image: linear-gradient(to right,
+                $tertiarylight,$tertiarydark),url(../img/involve3.jpg);
+            }
+        }
+
+        &__heading{
+            font-size: 2.8rem;
+            font-weight: 300;
+            text-align: right;
+            text-transform: uppercase;
+            color: $white;
+            position: absolute;
+            top: 12rem;
+            right: 2rem;
+            width: 75%;
+            &-span{
+                border-radius: 5rem;
+                padding: 1rem 1.5rem;
+                -webkit-box-decoration-break: clone;
+                &--1{
+                    background-image: linear-gradient(
+                        to right bottom,rgba($lightyellow,.85),rgba($orangedark,.85)
+                    );
+                }
+                &--2{
+                    background-image: linear-gradient(
+                        to right bottom,rgba($mediumblue,.85),rgba($darkblue,.85)
+                    );
+                }
+                &--3{
+                    background-image: linear-gradient(
+                        to right bottom,rgba($tertiarylight,.85),rgba($tertiarydark,.85)
+                    );
+                }
+            }
+        }
+
+        &__details{
+            padding: 3rem;
+            color: $lightgrey1;
+            ul{
+                list-style: none;
+                width: 70%;
+                margin: 0 auto;
+
+                li{
+                    text-align: center;
+                    color: black;
+                    opacity: 0.6;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    &:not(:last-child){
+                        border-bottom: 1px solid #dbdbdb;
+                    }
+                }
+            }
+
+        }
+    }
+   
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 90%;
+
+    }
+
+    &__price-box{
+        text-align: center;
+        color: $white;
+        margin-bottom: 8rem;
+    }
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+        margin-bottom: 5rem;
+    }
+    .btn{
+        font-size: 1.5rem;
+        color: grey;
+    }
+
+}
+// ----------------------------Testomonial Section----------------------
+.testimonials{
+    position: relative;
+    padding: 5rem 0;
+}
+.testimonial{
+    width: 80%;
+    padding: 6rem;
+    margin: 2rem auto;
+    box-shadow: 0 3rem 6rem rgba(black,.35);
+    font-size: $default-fontsize;
+    border-radius: 100rem;
+    background-color: rgba($white,.1);
+    padding-left: 9rem;
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        background-color: orangered;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem);
+        margin-top: -1rem;
+        position: relative;
+        shape-outside: circle(50% at 50% 50%);
+    }
+
+    &__img{
+        width: 100%;
+        transform: translateY(-2rem);
+        transition: all .3s;
+
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+
+    }
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+        transition: all .3s;
+    }
+    &:hover &__img{
+        filter: blur(.5rem) brightness(70%);
+        transform: scale(1.05);
+    }
+    &:hover{
+        background-color: rgba($white,1);
+    }
+}
+
+//   Video background for testimonials section
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+    overflow: hidden;
+    &__content{
+        height: 100%;
+        width: 100%;
+        object-fit: cover  ;
+    }
+}
+
+// Enroll Section
+
+.section-enroll{
+    padding: 10rem 0;
+    background-image: linear-gradient(to right bottom,$lightblue,$darkblue );
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+.header{
+    background-image: 
+    linear-gradient(to right bottom,rgba($lightblue,.8),rgba($darkblue,.8)),url("../img/background1.jpg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+    height: 95vh;
+    clip-path: ellipse(72% 61% at 51% 31%);   
+
+&__textbox{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    .header__headingText{
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 60px;    
+    }
+    %headingText {
+        display: block;
+        font-weight: 400;
+        letter-spacing: 12px;
+    }
+    .header__headingTextmain{
+        @extend %headingText;
+        font-size: 6.2rem;
+        animation: moveInLeft 2s ease;
+        }
+    .header__headingTextsub{
+        @extend %headingText;
+        font-size: 1.5rem;
+        animation: moveInRight 2s ease-out;
+        }
+}
+
+&__logobox{
+    position: absolute;
+    top:30px;
+    left: 30px;
+    .header__logoimg{
+        height: 70px;
+    }
+}
+&__icon{
+    position: absolute;
+    top: 30px;
+    left: 1213px;
+    color: #b4b4b4;
+    padding: 10px 12px;
+    background-color: $white;
+    border-radius: 50%;
+    font-size: 2rem;
+    
+    }
+&__icon:hover{
+    background-color: $darkblue;
+    color: $white;
+}
+
+&__textbox a{
+    text-decoration: none;
+    color: #777777;
+    font-weight: 400;
+}
+}
+
