@@ -8,7 +8,7 @@
     height: 95vh;
     clip-path: ellipse(72% 61% at 51% 31%);   
     @include respond(phone){
-        clip-path: ellipse(60% 50% at 50% 20%);
+        clip-path: ellipse(80% 60% at 50% 20%);
     }
 &__textbox{
     position: absolute;
@@ -20,7 +20,9 @@
         color: $white;
         text-transform: uppercase;
         margin-bottom: 60px;    
-        
+        @include respond(phone){
+            margin-bottom: 30px;
+        }
     }
     %headingText {
         display: block;
@@ -29,12 +31,17 @@
     }
     .header__headingTextmain{
         @extend %headingText;
-        font-size: 6.2rem;
+        font-size: 6rem;
         animation: moveInLeft 2s ease;
+         @include respond(tab-port) {
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
         @include respond(phone) {
             letter-spacing: 1rem;
-            font-size: 5rem;
-        }
+            font-size: 4.2rem;
+        };
+      
         }
     .header__headingTextsub{
         @extend %headingText;
@@ -43,7 +50,6 @@
         };
         @include respond(phone) {
             letter-spacing: .5rem;
-            
         }
 }
 
@@ -53,7 +59,16 @@
     left: 30px;
     .header__logoimg{
         height: 70px;
+        @include respond(phone) {
+            height: 60px;
+            
+        }
     }
+    @include respond(phone) {
+        left: 20px;
+        
+    }
+
 }
 &__icon{
     position: absolute;
